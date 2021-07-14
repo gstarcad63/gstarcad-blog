@@ -3,30 +3,44 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: "我的网站",
+  title: "Gstarcad web开发工程师",
   tagline: "web 全栈教程",
-  url: "https://your-docusaurus-test-site.com",
+  url: "https://gstarcad63.github.io",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
-  organizationName: "facebook", // Usually your GitHub org/user name.
-  projectName: "docusaurus", // Usually your repo name.
+  organizationName: "gstarcad63", // Usually your GitHub org/user name.
+  projectName: "gstarcad-blog", // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: "My Blog",
+      title: "Gstarcad", // h1 标题
       logo: {
         alt: "My Blog Logo",
         src: "img/logo.svg",
       },
       items: [
         {
+          // to: "docs/",
+          // activeBasePath: "docs", // 路径
+          // label: "文档",
+          // position: "right",
+          // items: [
+          //   {
+          //     label: "博客",
+          //     to: "blog",
+          //   },
+          // ],
+        },
+
+        {
           type: "doc",
           docId: "intro",
-          position: "left",
+          position: "right",
           label: "教程",
         },
-        { to: "/blog", label: "博客", position: "left" },
+        { to: "blog", label: "博客", position: "right" },
+
         {
           href: "https://github.com/gstarcad63",
           label: "GitHub",
@@ -38,33 +52,25 @@ module.exports = {
       style: "dark",
       links: [
         {
-          title: "Docs",
+          title: "文档",
           items: [
             {
-              label: "Tutorial",
+              label: "教程",
               to: "/docs/intro",
             },
           ],
         },
         {
-          title: "Community",
+          title: "社区",
           items: [
             {
-              label: "Stack Overflow",
-              href: "https://stackoverflow.com/questions/tagged/docusaurus",
-            },
-            {
-              label: "Discord",
-              href: "https://discordapp.com/invite/docusaurus",
-            },
-            {
-              label: "Twitter",
-              href: "https://twitter.com/docusaurus",
+              label: "laravel 中文社区",
+              href: "https://learnku.com/users/67821/",
             },
           ],
         },
         {
-          title: "More",
+          title: "更多",
           items: [
             {
               label: "Blog",
@@ -72,12 +78,12 @@ module.exports = {
             },
             {
               label: "GitHub",
-              href: "https://github.com/facebook/docusaurus",
+              href: "https://github.com/gstarcad63",
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `版权所有 © ${new Date().getFullYear()} 此项目. 使用 Docusaurus 构建.`,
     },
     prism: {
       theme: lightCodeTheme,
@@ -96,9 +102,8 @@ module.exports = {
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            "https://github.com/facebook/docusaurus/edit/master/website/blog/",
+
+          editUrl: "/blog",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -106,4 +111,8 @@ module.exports = {
       },
     ],
   ],
+  i18n: {
+    defaultLocale: "zh-CN",
+    locales: ["zh-CN"],
+  },
 };
